@@ -3,10 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Cars - AutoMarket</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
+    <title>Car Details - AutoMarket</title>
+
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/components.css">
+
     <style>
-       
+        main {
+            padding-top: 100px;
+            min-height: calc(100vh - 200px);
+        }
+        .detail-card {
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid #eee;
+        }
+        .detail-card h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .detail-sub {
+            color: #666;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        table {
+            width: 100%;
+            background: white;
+            margin-bottom: 20px;
+        }
+        td {
+            padding: 12px 8px;
+        }
+        .car-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .price {
+            font-size: 1.8rem;
+            color: #e63946;
+            font-weight: bold;
+        }
+        .btn-back {
+            display: inline-block;
+            padding: 0.85rem 2rem;
+            background: #111;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .btn-back:hover {
+            background: #333;
+        }
+        @media (max-width: 640px) {
+            .detail-card {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            main {
+                padding-top: 140px;
+            }
+        }
     </style>
+</head>
