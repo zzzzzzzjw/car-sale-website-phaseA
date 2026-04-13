@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Seller Login - AutoVerve </title>
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/layout.css">
+        <link rel="stylesheet" href="../../css/components.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="container flex-between">
+                <a href="../../index.html">
+                    <img src="../../images/logo.png" alt="AutoVerve Logo" class="logo-img">
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../car/search.html">Search Cars</a></li>
+                    <li><a href="./register.html">Seller Register</a></li>
+                    <li><a href="./login.html" style="color:#fff; border-bottom:2px solid #fff;">Seller Login</a></li>
+                    <li><a href="../car/add-car.html">Add Car</a></li>
+                    <li><a href="../car/detail.html">Car Details</a></li>
+                </ul>
+            </div>
+        </nav>    
+
+    <section class="light-section">
+            <div class="container" style="max-width: 600px; margin-top: 80px;">
+                <h2> Welcome to AutoVerve </h2>
+                <p> Please log in to your seller account. </p>
+
+                <form id="LoginForm" style="margin-top: 32px;">
+                    <div class="form-group" style="margin-bottom: calc(var(--space) * 3);">
+                        <label for="username" style="display: block; margin-bottom: var(--space); font-weight: 500;"> Username: </label>
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            required
+                            minlength="6"
+                            pattern="[a-zA-Z0-9\s]+"
+                            title="Must consist of at least 6 alphanumeric characters"
+                            style="width: 100%; padding: calc(var(--space) * 1.5); border-radius: var(--radius); border: 1px solid #ddd; font-family: var(--font-body); font-size: 1rem;">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: calc(var(--space) * 3);">
+                        <label for="password" style="display: block; margin-bottom: var(--space); font-weight: 500;"> Password: </label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            required
+                            minlength="6"
+                            pattern="[a-zA-Z0-9\s]+"
+                            title="Must consist of at least 6 alphanumeric characters"
+                            style="width: 100%; padding: calc(var(--space) * 1.5); border-radius: var(--radius); border: 1px solid #ddd; font-family: var(--font-body); font-size: 1rem;">
+                    </div>
+
+                    <button 
+                        type="submit"
+                        style=
+                            "padding: calc(var(--space) * 1.5) calc(var(--space) * 4); 
+                            background: var(--primary); 
+                            color: var(--accent); 
+                            border: none; 
+                            border-radius: var(--radius); 
+                            font-family: var(--font-body); 
+                            font-size: 1rem; 
+                            font-weight: 500;
+                            cursor: pointer;
+                            transition: var(--trans);"
+                        onmouseover="this.style.opacity=0.9"
+                        onmouseout="this.style.opacity=1">
+                        Login
+                    </button>
+
+                    <p style="margin-top: 24px; font-size: 0.9rem; color:#666;">
+                        Don't have an account?
+                        <a 
+                            href="./register.html"
+                            style="color: var(--primary); text-decoration: underline;"
+                        >
+                            Register here
+                        </a> 
+                    </p>
+
+                </form>
+                
+            </div>
+        </section>
+    
+    </body>
+</html>
