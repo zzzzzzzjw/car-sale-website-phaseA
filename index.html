@@ -2,86 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 响应式必需 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoMarket - Premium Car Sales</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
+    <title>AutoMarket</title>
+    <!-- 外部样式表 -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
-    <!-- 导航栏 -->
+    <!-- 多向导航 -->
     <nav class="navbar">
-        <div class="container flex-between">
-            <a href="index.html" class="logo-link">
-                <img src="images/logo.png" alt="AutoMarket Logo" class="logo-img">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Logo">
             </a>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="pages/car/search.html">Search Cars</a></li>
-                <li><a href="pages/seller/register.html">Seller Register</a></li>
-                <li><a href="pages/seller/login.html">Seller Login</a></li>
+                <li><a href="pages/car/search.html">Search</a></li>
+                <li><a href="pages/seller/register.html">Register</a></li>
+                <li><a href="pages/seller/login.html">Login</a></li>
                 <li><a href="pages/car/add-car.html">Add Car</a></li>
-                <li><a href="pages/car/detail.html">Car Details</a></li>
             </ul>
         </div>
     </nav>
 
-    <main>
-        <!-- Hero 主视觉 -->
-        <section class="hero">
-            <div class="container hero-content">
-                <span class="badge">Verified Sellers Only</span>
-                <h1>Find Your Next Premium Vehicle</h1>
-                <p>Welcome to AutoMarket. We connect trusted sellers with serious buyers. Browse verified listings, compare models, and secure your next car with full transparency.</p>
-                <div class="btn-group">
-                    <a href="pages/car/search.html" class="btn btn-primary">Browse Inventory</a>
-                    <a href="pages/seller/register.html" class="btn btn-outline">Become a Seller</a>
-                </div>
-            </div>
-        </section>
+    <!-- Hero区域：简介+链接 -->
+    <section class="hero">
+        <div class="container">
+            <h1>AutoMarket</h1>
+            <p>Buy and sell premium vehicles online.</p>
+            <a href="pages/car/search.html" class="btn">Search Cars</a>
+        </div>
+    </section>
 
-        <!-- 业务简介 -->
-        <section class="light-section">
-            <div class="container">
-                <h2>About AutoMarket</h2>
-                <p>AutoMarket is a dedicated platform for buying and selling premium vehicles. Every seller undergoes a verification process to ensure safe transactions. Our advanced search allows buyers to filter by model and year, while sellers can easily manage listings, upload images, and track inquiries.</p>
-                <p>We focus on quality, transparency, and user experience. Whether you are upgrading your daily driver or looking for a collector's item, our marketplace provides the tools you need to make informed decisions.</p>
-            </div>
-        </section>
+    <!-- About区域：业务简介 -->
+    <section class="about">
+        <div class="container">
+            <h2>About</h2>
+            <p>AutoMarket connects verified sellers with buyers. Safe, simple, and transparent.</p>
+        </div>
+    </section>
 
-        <!-- 功能入口 -->
-        <section class="container" style="padding: 60px 0;">
-            <h2>Platform Features</h2>
-            <div class="card-grid">
-                <article class="card">
-                    <h3>Smart Search</h3>
-                    <p>Filter vehicles by model, year, and location. Get instant results with detailed previews.</p>
-                    <a href="pages/car/search.html" class="btn btn-outline">Try Search</a>
-                </article>
-                <article class="card">
-                    <h3>Seller Dashboard</h3>
-                    <p>Manage your listings, update pricing, and communicate with buyers through our secure system.</p>
-                    <a href="pages/seller/login.html" class="btn btn-outline">Access Dashboard</a>
-                </article>
-                <article class="card">
-                    <h3>List Your Car</h3>
-                    <p>Upload high-quality images, set competitive prices, and reach thousands of verified buyers.</p>
-                    <a href="pages/car/add-car.html" class="btn btn-outline">Add Vehicle</a>
-                </article>
-            </div>
-        </section>
-    </main>
-
-    <!-- 页脚 -->
+    <!-- 页脚-->
     <footer class="footer">
-        <div class="container flex-between">
-            <p>&copy; 2026 AutoMarket. All rights reserved.</p>
-            <nav class="footer-links">
-                <a href="pages/car/search.html">Search</a>
-                <a href="pages/seller/register.html">Register</a>
-                <a href="pages/seller/login.html">Login</a>
-            </nav>
+        <div class="container">
         </div>
     </footer>
 
