@@ -1,0 +1,159 @@
+/*基础设置*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*盒模型计算 */
+}
+
+body {
+    font-family: Arial, sans-serif; /* 基础字体 */
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*导航栏 */
+.navbar {
+    background-color: #0a0a0a;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-menu a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff; /* Lab4: hover交互 */
+}
+
+/* Hero区域：盒模型 */
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)), url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    margin-top: 70px;
+    color: #fff;
+    display: block;          /* 默认排列 */
+    text-align: left;        /* 改为 left / center / right 测试效果 */
+    padding-top: 60px;       /* 控制整体距顶部高度 */
+}
+
+/* 容器整体偏移 */
+.hero .container {
+    margin-left: 8%;         /* 调整左右位置（百分比适配响应式） */
+}
+
+.hero h1 {
+    position: relative;
+    top: 0px;    /* 改大数字往下移 */
+    left: 0px;   /* 改大数字往右移 */
+    font-size: 48px;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 8px 12px;
+    display: inline-block;
+}
+
+/* 段落单独微调 */
+.hero p {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 8px 12px;
+    display: inline-block;
+}
+
+/* 按钮单独微调 */
+.hero .btn {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #fff;
+    color: #0a0a0a;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 8px;
+}
+
+/* About区域：盒模型  */
+.about {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.about p {
+    font-size: 16px;
+    color: #666;
+}
+
+/*页脚*/
+.footer {
+    background-color: #0a0a0a;
+    padding: 20px 0;
+}
+
+/* 响应式：媒体查询*/
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .about h2 {
+        font-size: 24px;
+    }
+}
