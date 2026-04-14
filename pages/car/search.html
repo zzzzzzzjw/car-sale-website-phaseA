@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Cars - AutoMarket</title>
+    <title>Add Car - AutoMarket</title>
 
-    <link rel="stylesheet" href="../../css/base.css">
-    <link rel="stylesheet" href="../../css/layout.css">
-    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/style.css">
 
     <style>
         main {
             padding-top: 100px;
-            min-height: calc(100vh - 200px);
         }
-        .search-card {
+
+        .card {
             max-width: 700px;
             margin: 0 auto 2rem auto;
             background: white;
@@ -22,17 +20,20 @@
             border-radius: 16px;
             border: 1px solid #eee;
         }
-        .search-card h1 {
+
+        .card h1 {
             font-size: 1.8rem;
             margin-bottom: 0.5rem;
         }
-        .search-sub {
+
+        .sub {
             color: #666;
             margin-bottom: 1.5rem;
             padding-bottom: 1rem;
             border-bottom: 1px solid #eee;
         }
-        .btn-search {
+
+        .submit {
             width: 100%;
             padding: 0.85rem;
             background: #111;
@@ -43,17 +44,21 @@
             cursor: pointer;
             margin-top: 0.5rem;
         }
-        .btn-search:hover {
+
+        .submit:hover {
             background: #333;
         }
+
         table {
             width: 100%;
             background: white;
             margin-bottom: 20px;
         }
+
         td {
             padding: 12px 8px;
         }
+
         input, select {
             width: 100%;
             padding: 8px;
@@ -61,71 +66,32 @@
             border-radius: 8px;
             box-sizing: border-box;
         }
+
         @media (max-width: 640px) {
-            .search-card {
+            .card {
                 margin: 1rem;
                 padding: 1.5rem;
             }
             main {
                 padding-top: 140px;
-                min-height: calc(100vh - 180px);
             }
         }
     </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="container flex-between">
-            <a href="../../index.html" class="logo-link">
-                <img src="../../images/logo.png" alt="AutoMarket Logo" class="logo-img">
-            </a>
-            <ul class="nav-menu">
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="search.html" style="color:#fff; border-bottom:2px solid #fff;">Search Cars</a></li>
-                <li><a href="../seller/register.html">Seller Register</a></li>
-                <li><a href="../seller/login.html">Seller Login</a></li>
-                <li><a href="add-car.html">Add Car</a></li>
-                <li><a href="detail.html">Car Details</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main>
-        <div class="container">
-            <div class="search-card">
-                <h1>Search Cars</h1>
-                <div class="search-sub">Find your dream car by model and year</div>
-
-                <form action="#" method="get">
-                    <table border="1" cellpadding="8" cellspacing="0">
-                        <tr>
-                            <td width="30%"><b>Model:</b></td>
-                            <td><input type="text" name="model" placeholder="e.g., Camry, Model 3"></td>
-                        </tr>
-                        <tr>
-                            <td><b>Year:</b></td>
-                            <td><input type="text" name="year" placeholder="e.g., 2022"></td>
-                        </tr>
-                    </table>
-
-                    <input type="submit" value="Search" class="btn-search">
-                    <input type="reset" value="Clear" style="margin-top: 10px; width: 100%; padding: 0.85rem; background: #999; color: white; border: none; border-radius: 40px; cursor: pointer;">
-                </form>
-            </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container flex-between">
-            <p>&copy; 2026 AutoMarket. All rights reserved.</p>
-            <nav class="footer-links">
-                <a href="search.html">Search</a>
-                <a href="../seller/register.html">Register</a>
-                <a href="../seller/login.html">Login</a>
-            </nav>
-        </div>
-    </footer>
-
-</body>
-</html>
+<nav class="navbar">
+    <div class="container">
+        <a href="../../index.html" class="logo">
+            <img src="../../images/logo.png" alt="AutoMarket Logo">
+        </a>
+        <ul class="nav-menu">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="search.html">Search Cars</a></li>
+            <li><a href="../seller/register.html">Seller Register</a></li>
+            <li><a href="../seller/login.html">Seller Login</a></li>
+            <li><a href="add-car.html" style="color:#fff; border-bottom:2px solid #fff;">Add Car</a></li>
+            <li><a href="detail.html">Car Details</a></li>
+        </ul>
+    </div>
+</nav>
