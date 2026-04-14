@@ -2,52 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- 响应式必需 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoMarket</title>
-    <!-- 外部样式表 -->
+    <title>AutoMarket - Homepage</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
-    <!-- 多向导航 -->
-    <nav class="navbar">
+    <!-- 导航栏 -->
+    <div class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Logo">
-            </a>
-            <ul class="nav-menu">
+            <div class="logo">
+                <img src="images/logo.png" alt="AutoMarket Logo">
+            </div>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="pages/car/search.html">Search</a></li>
+                <li><a href="pages/car/search.html">Search Cars</a></li>
                 <li><a href="pages/seller/register.html">Register</a></li>
                 <li><a href="pages/seller/login.html">Login</a></li>
                 <li><a href="pages/car/add-car.html">Add Car</a></li>
             </ul>
         </div>
-    </nav>
+    </div>
 
-    <!-- Hero区域：简介+链接 -->
-    <section class="hero">
-        <div class="container">
-            <h1>AutoMarket</h1>
-            <p>Buy and sell premium vehicles online.</p>
-            <a href="pages/car/search.html" class="btn">Search Cars</a>
+    <!-- 主视觉区：左对齐布局 -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Find Your Next<br>Premium Vehicle</h1>
+            <p>Welcome to AutoMarket. We connect trusted sellers with serious buyers. Browse verified listings, compare models, and secure your next car with full transparency.</p>
+            <div class="button-group">
+                <a href="pages/car/search.html" class="btn btn-primary">Browse Inventory</a>
+                <a href="pages/seller/register.html" class="btn btn-outline">Become a Seller</a>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <!-- About区域：业务简介 -->
-    <section class="about">
+    <!-- 业务简介区 -->
+    <div class="about-section">
         <div class="container">
-            <h2>About</h2>
-            <p>AutoMarket connects verified sellers with buyers. Safe, simple, and transparent.</p>
+            <h2>About Us</h2>
+            <p>AutoMarket is a platform for trusted car sales. We verify sellers to ensure secure transactions for all buyers.</p>
         </div>
-    </section>
+    </div>
 
-    <!-- 页脚-->
-    <footer class="footer">
+    <!-- 产品推荐区（四个汽车方块） -->
+    <div class="featured-cars">
+        <div class="container">
+            <h2>Featured Vehicles</h2>
+            <div class="car-grid">
+                <div class="car-item">
+                    <img src="images/car1.jpg" alt="Luxury SUV">
+                    <h3>Luxury SUV</h3>
+                    <p>From $35,000</p>
+                </div>
+                <div class="car-item">
+                    <img src="images/car2.jpg" alt="Sports Car">
+                    <h3>Sports Car</h3>
+                    <p>From $45,000</p>
+                </div>
+                <div class="car-item">
+                    <img src="images/car3.jpg" alt="Premium Sedan">
+                    <h3>Premium Sedan</h3>
+                    <p>From $28,000</p>
+                </div>
+                <div class="car-item">
+                    <img src="images/car4.jpg" alt="Electric Car">
+                    <h3>Electric Car</h3>
+                    <p>From $40,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
         <div class="container">
         </div>
-    </footer>
+    </div>
 
 </body>
 </html>
