@@ -1,0 +1,270 @@
+/*  基础重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 统一盒模型 */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*  导航栏 */
+.navbar {
+    background-color: #222222;
+    padding: 10px 0;
+}
+
+.logo {
+    float: left; /*  浮动定位 */
+}
+
+.logo img {
+    height: 40px;
+    display: block;
+}
+
+.nav-links {
+    list-style-type: none; /*  移除列表圆点 */
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    float: left; /*  水平排列 */
+}
+
+.nav-links li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none; /*  移除下划线 */
+    padding: 12px 16px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
+
+/* 悬停效果 */
+.nav-links li a:hover {
+    background-color: #555555;
+}
+
+/* 主视觉区 */
+.hero-section {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 85vh; /* 视口高度 */
+    position: relative; /* 为遮罩层定位 */
+}
+
+/* 深色遮罩层 */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* 半透明黑色 */
+}
+
+/* 内容容器 */
+.hero-content {
+    position: relative; /* 相对定位 */
+    z-index: 1; /* 确保在遮罩层之上 */
+    max-width: 600px; /* 最大宽度 */
+    margin-left: 5%; /* 左边距 */
+    padding-top: 150px; /* 顶部内边距 */
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: 48px; /* 字体大小 */
+    margin-bottom: 20px;
+    line-height: 1.2; /* 行高 */
+    text-align: left; /* 左对齐 */
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    text-align: left; /* 左对齐 */
+}
+
+/* 按钮组 */
+.button-group {
+    display: inline-block; /* 行内块元素 */
+}
+
+/* 按钮基础样式（无圆角） */
+.btn {
+    display: inline-block; /*  行内块元素 */
+    padding: 15px 30px; /* 内边距 */
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid; /* 边框 */
+    margin-right: 15px; /* 右边距 */
+}
+
+/* 主要按钮 */
+.btn-primary {
+    background-color: #ffffff;
+    color: #222222;
+    border-color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #dddddd; /*悬停变色 */
+}
+
+/* 轮廓按钮 */
+.btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.btn-outline:hover {
+    background-color: #ffffff; /* 悬停变色 */
+    color: #222222;
+}
+
+/* 简介区 */
+.about-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #111111;
+}
+
+.about-section p {
+    font-size: 16px;
+    color: #666666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 产品推荐区 */
+.featured-cars {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+.featured-cars h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #111111;
+}
+
+/* 网格容器 */
+.car-grid {
+    /* 使用百分比宽度实现响应式 */
+    width: 100%;
+}
+
+/* 单个车辆卡片 */
+.car-item {
+    /* 浮动实现横向排列 */
+    float: left;
+    /* 4 列布局，每列占 25% */
+    width: 25%;
+    padding: 15px; /* 内边距 */
+    text-align: center;
+    /* 盒模型 - 边框 */
+    border: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+}
+
+/* 响应式图片 */
+.car-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* 保持比例填充 */
+    margin-bottom: 15px;
+}
+
+.car-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #222222;
+}
+
+.car-item p {
+    font-size: 16px;
+    color: #666666;
+    font-weight: bold;
+}
+
+/* 页脚 */
+.footer {
+    background-color: #222222;
+    padding: 20px 0;
+}
+
+/* 响应式设计 */
+/* 平板设备（768px） */
+@media screen and (max-width: 768px) {
+    .logo, .nav-links {
+        float: none;
+        text-align: center;
+    }
+    
+    .nav-links li {
+        float: none;
+        display: block;
+    }
+    
+    /* 字体缩小 */
+    .hero-section h1 { font-size: 32px; }
+    .hero-section p { font-size: 16px; }
+    .about-section h2 { font-size: 24px; }
+    
+    /* 按钮占满宽度 */
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* 车辆卡片改为 2 列 */
+    .car-item {
+        width: 50%; /* 每行 2 个 */
+    }
+}
+
+/* 手机设备（480px） */
+@media screen and (max-width: 480px) {
+    /* 车辆卡片改为 1 列 */
+    .car-item {
+        width: 100%; /* 每行 1 个 */
+    }
+    
+    .hero-section {
+        height: 70vh; /* 降低高度适应小屏 */
+    }
+}
+
+/* 清除浮动 */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}

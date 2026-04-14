@@ -3,87 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoMarket - Premium Car Sales</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
+    <title>AutoMarket - Homepage</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
     <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container flex-between">
-            <a href="index.html" class="logo-link">
-                <img src="images/logo.png" alt="AutoMarket Logo" class="logo-img">
-            </a>
-            <ul class="nav-menu">
+    <div class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="AutoMarket Logo">
+            </div>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pages/car/search.html">Search Cars</a></li>
-                <li><a href="pages/seller/register.html">Seller Register</a></li>
-                <li><a href="pages/seller/login.html">Seller Login</a></li>
+                <li><a href="pages/seller/register.html">Register</a></li>
+                <li><a href="pages/seller/login.html">Login</a></li>
                 <li><a href="pages/car/add-car.html">Add Car</a></li>
-                <li><a href="pages/car/detail.html">Car Details</a></li>
             </ul>
         </div>
-    </nav>
+    </div>
 
-    <main>
-        <!-- Hero 主视觉 -->
-        <section class="hero">
-            <div class="container hero-content">
-                <span class="badge">Verified Sellers Only</span>
-                <h1>Find Your Next Premium Vehicle</h1>
-                <p>Welcome to AutoMarket. We connect trusted sellers with serious buyers. Browse verified listings, compare models, and secure your next car with full transparency.</p>
-                <div class="btn-group">
-                    <a href="pages/car/search.html" class="btn btn-primary">Browse Inventory</a>
-                    <a href="pages/seller/register.html" class="btn btn-outline">Become a Seller</a>
+    <!-- 主视觉区：左对齐布局 -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Find Your Next<br>Premium Vehicle</h1>
+            <p>Welcome to AutoMarket. We connect trusted sellers with serious buyers. Browse verified listings, compare models, and secure your next car with full transparency.</p>
+            <div class="button-group">
+                <a href="pages/car/search.html" class="btn btn-primary">Browse Inventory</a>
+                <a href="pages/seller/register.html" class="btn btn-outline">Become a Seller</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 业务简介区 -->
+    <div class="about-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>AutoMarket is a platform for trusted car sales. We verify sellers to ensure secure transactions for all buyers.</p>
+        </div>
+    </div>
+
+    <!-- 产品推荐区（四个汽车方块） -->
+    <div class="featured-cars">
+        <div class="container">
+            <h2>Featured Vehicles</h2>
+            <div class="car-grid">
+                <div class="car-item">
+                    <img src="images/car1.jpg" alt="Luxury SUV">
+                    <h3>Luxury SUV</h3>
+                    <p>From $35,000</p>
+                </div>
+                <div class="car-item">
+                    <img src="images/car2.jpg" alt="Sports Car">
+                    <h3>Sports Car</h3>
+                    <p>From $45,000</p>
+                </div>
+                <div class="car-item">
+                    <img src="images/car3.jpg" alt="Premium Sedan">
+                    <h3>Premium Sedan</h3>
+                    <p>From $28,000</p>
+                </div>
+                <div class="car-item">
+                    <img src="images/car4.jpg" alt="Electric Car">
+                    <h3>Electric Car</h3>
+                    <p>From $40,000</p>
                 </div>
             </div>
-        </section>
-
-        <!-- 业务简介 -->
-        <section class="light-section">
-            <div class="container">
-                <h2>About AutoMarket</h2>
-                <p>AutoMarket is a dedicated platform for buying and selling premium vehicles. Every seller undergoes a verification process to ensure safe transactions. Our advanced search allows buyers to filter by model and year, while sellers can easily manage listings, upload images, and track inquiries.</p>
-                <p>We focus on quality, transparency, and user experience. Whether you are upgrading your daily driver or looking for a collector's item, our marketplace provides the tools you need to make informed decisions.</p>
-            </div>
-        </section>
-
-        <!-- 功能入口 -->
-        <section class="container" style="padding: 60px 0;">
-            <h2>Platform Features</h2>
-            <div class="card-grid">
-                <article class="card">
-                    <h3>Smart Search</h3>
-                    <p>Filter vehicles by model, year, and location. Get instant results with detailed previews.</p>
-                    <a href="pages/car/search.html" class="btn btn-outline">Try Search</a>
-                </article>
-                <article class="card">
-                    <h3>Seller Dashboard</h3>
-                    <p>Manage your listings, update pricing, and communicate with buyers through our secure system.</p>
-                    <a href="pages/seller/login.html" class="btn btn-outline">Access Dashboard</a>
-                </article>
-                <article class="card">
-                    <h3>List Your Car</h3>
-                    <p>Upload high-quality images, set competitive prices, and reach thousands of verified buyers.</p>
-                    <a href="pages/car/add-car.html" class="btn btn-outline">Add Vehicle</a>
-                </article>
-            </div>
-        </section>
-    </main>
+        </div>
+    </div>
 
     <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container flex-between">
-            <p>&copy; 2026 AutoMarket. All rights reserved.</p>
-            <nav class="footer-links">
-                <a href="pages/car/search.html">Search</a>
-                <a href="pages/seller/register.html">Register</a>
-                <a href="pages/seller/login.html">Login</a>
-            </nav>
+    <div class="footer">
+        <div class="container">
         </div>
-    </footer>
+    </div>
 
 </body>
 </html>
