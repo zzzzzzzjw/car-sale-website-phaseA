@@ -1,36 +1,3 @@
-/* This is the code from box_style.css, I think this can make the structure more clear */
-.top-navigation-bar {
-    width: 100%;
-    height: 60px;
-    background-color: #333333;
-}
-
-.brand-logo-area {
-    float: left;
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-ul.main-menu-links {
-    list-style-type: none;
-    float: right;
-    margin-right: 20px;
-}
-
-ul.main-menu-links li {
-    float: left;
-    padding: 10px 15px;
-}
-
-ul.main-menu-links li a {
-    text-decoration: none;
-    color: lightgray;
-}
-
-ul.main-menu-links li a:hover {
-    color: white;
-}
-
 /*----------------------------------------------------------------------------------------------------------------*/
 
 .inner-container {
