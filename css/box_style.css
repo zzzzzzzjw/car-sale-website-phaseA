@@ -8,41 +8,6 @@ body {
 
 /*------------------------------------------------------------------------------------------------------------------------------*/
 
-/*I think zhe login and register page need this.So if you do not need,you can ignore */
-.top-navigation-bar {
-    width: 100%;
-    height: 60px;
-    background-color: #333333;
-}
-
-.brand-logo-area {
-    float: left;
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-ul.main-menu-links {
-    list-style-type: none;
-    float: right;
-    margin-right: 20px;
-}
-
-ul.main-menu-links li {
-    float: left;
-    padding: 10px 15px;
-}
-
-ul.main-menu-links li a {
-    text-decoration: none;
-    color: lightgray;
-}
-
-ul.main-menu-links li a:hover {
-    color: white;
-}
-
-/*------------------------------------------------------------------------------------------------------------------------------*/
-
 /*The detailed box style*/
 .full-screen-container {
     width: 100%;

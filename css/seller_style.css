@@ -42,8 +42,20 @@ ul.main-menu-links li a:hover {
     clear: both;
 }
 
-.bigshowing-section {
+.hengxiangzhanshi-section {
     padding: 80px 0;
     background-color: lightgray;
+}
+
+.hengxiangzhanshi-text {
+    float: left;
+    width: 45%;
+    margin-top: 40px;
+}
+
+.hengxiangzhanshi-bigtitle {
+    font-size: 50px;
+    margin: 20px 0;
+    color: white;
 }
 
