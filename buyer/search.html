@@ -25,38 +25,62 @@
             color: white;
             font-size: 48px;
             font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
-        .results {
-            max-width: 800px;
+        .filter-bar {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .filter-bar input {
+            padding: 10px;
+            width: 150px;
+            margin: 5px;
+        }
+        
+        .filter-bar button {
+            padding: 10px 30px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .recommend-section {
             margin: 40px auto;
             padding: 20px;
         }
         
-        .result-item {
-            background-color: white;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        
-        .result-item:hover {
-            transform: scale(1.02);
-            background-color: #f9f9f9;
-        }
-        
-        .result-item h3 {
-            margin: 0 0 5px 0;
+        .recommend-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
             color: #333;
         }
         
-        .result-item p {
-            margin: 0;
-            color: #666;
+        .car-card {
+            background-color: white;
+            width: 220px;
+            display: inline-block;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        
+        .car-card img {
+            width: 100%;
+            height: 150px;
+        }
+        
+        .car-card h3 {
+            margin: 10px;
+            font-size: 16px;
+        }
+        
+        .car-card p {
+            margin: 5px 10px 15px 10px;
+            color: #e53935;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -84,3 +108,45 @@
 <div class="hero">
     <div class="hero-text">SEARCH</div>
 </div>
+
+<div class="filter-bar">
+    <input type="text" id="model" placeholder="Model e.g. Tesla">
+    <input type="text" id="year" placeholder="Year e.g. 2023">
+    <input type="text" id="colour" placeholder="Colour e.g. Red">
+    <input type="text" id="price" placeholder="Price e.g. 300000">
+    <button onclick="doSearch()">Search</button>
+</div>
+
+<div class="recommend-section">
+    <div class="recommend-title">Recommended for You</div>
+    <div class="car-card" onclick="goToDetail('Tesla Model S', 2023)">
+        <img src="../images/TESLA_S.png" alt="Tesla Model S">
+        <h3>Tesla Model S - 2023</h3>
+        <p>¥350,000</p>
+    </div>
+</div>
+
+<script>
+    function doSearch() {
+        var model = document.getElementById('model').value;
+        var year = document.getElementById('year').value;
+        var colour = document.getElementById('colour').value;
+        var price = document.getElementById('price').value;
+        
+        var params = [];
+        if (model) params.push('model=' + encodeURIComponent(model));
+        if (year) params.push('year=' + encodeURIComponent(year));
+        if (colour) params.push('colour=' + encodeURIComponent(colour));
+        if (price) params.push('price=' + encodeURIComponent(price));
+        
+        var queryString = params.join('&');
+        window.location.href = 'detail.html?' + queryString;
+    }
+    
+    function goToDetail(model, year) {
+        window.location.href = 'detail.html?model=' + encodeURIComponent(model) + '&year=' + year;
+    }
+</script>
+
+</body>
+</html>
