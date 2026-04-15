@@ -59,3 +59,57 @@ ul.main-menu-links li a:hover {
     color: white;
 }
 
+.hengxiang-picture {
+    float: right;
+    width: 100%;
+}
+.hengxiang-img {
+    width: 100%;
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+.car-box {
+    float: left;
+    width: 27%;
+    margin: 1%;
+    padding: 2%;
+    background-color: white;
+}
+
+.car-box-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.car-explaination {
+    font-size: 14px;
+    color: black;
+    height: 40px;
+}
+
+.car-box-picture {
+    margin: 30px 0;
+    height: 180px;
+    overflow: hidden;
+}
+.car-box-img {
+    width: 100%;
+    height: auto;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.outline-btn {
+    display: inline-block; 
+    border: 1px solid black; 
+    padding: 8px 25px; 
+    text-decoration: none; 
+    color: black; 
+    font-size: 14px; 
+    font-weight: bold;
+}
