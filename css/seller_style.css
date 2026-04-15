@@ -43,28 +43,22 @@ ul.main-menu-links li a:hover {
 }
 
 .hengxiangzhanshi-section {
-    padding: 80px 0;
-    background-color: lightgray;
+    padding: 60px 0 200px 0;
+    background-image: url("../images/sellerpgae-car.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .hengxiangzhanshi-text {
-    float: left;
-    width: 45%;
-    margin-top: 40px;
+
+    width: 100%;
+    margin-top: 0;
 }
 
 .hengxiangzhanshi-bigtitle {
-    font-size: 50px;
+    font-size: 60px;
     margin: 20px 0;
     color: white;
-}
-
-.hengxiang-picture {
-    float: right;
-    width: 50%;
-}
-.hengxiang-img {
-    width: 100%;
 }
 
 /*----------------------------------------------------------------------------------------------------------------*/
