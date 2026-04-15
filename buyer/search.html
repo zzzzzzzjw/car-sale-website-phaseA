@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Cars - AutoMarket</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        
+        .hero {
+            background-image: url('../images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            position: relative;
+        }
+        
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .results {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        
+        .result-item {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .result-item:hover {
+            transform: scale(1.02);
+            background-color: #f9f9f9;
+        }
+        
+        .result-item h3 {
+            margin: 0 0 5px 0;
+            color: #333;
+        }
+        
+        .result-item p {
+            margin: 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="container clearfix">
+        <div class="logo">
+            <a href="../homepage/index.html">
+                <img src="../images/logo.png" alt="AutoMarket Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../homepage/index.html">Home</a></li>
+            <li><a href="search.html">Search Cars</a></li>
+            <li><a href="../seller/register.html">Register</a></li>
+            <li><a href="../seller/login.html">Login</a></li>
+            <li><a href="../seller/add-car.html">Add Car</a></li>
+        </ul>
+    </div>
+</div>
+
+<div style="clear: both;"></div>
+
+<div class="hero">
+    <div class="hero-text">SEARCH</div>
+</div>
