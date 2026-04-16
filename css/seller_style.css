@@ -31,11 +31,15 @@
 /*----------------------------------------------------------------------------------------------------------------*/
 
 .car-box {
-    float: left;
-    width: 27%;
-    margin: 1%;
+    /*Switched from 'float' to 'inline-block'.*/ 
+    /*I learned that this allows the car boxes to be perfectly centered from CSDN*/
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin: 20px 1%;
     padding: 2%;
     background-color: white;
+    text-align: left;
 }
 
 .car-box-title {
@@ -51,7 +55,7 @@
 
 .car-box-picture {
     margin: 30px 0;
-    height: 180px;
+    height: 120px;
     overflow: hidden;
 }
 .car-box-img {
@@ -66,6 +70,8 @@
 }
 
 .outline-btn {
+    /*Switched from 'float' to 'inline-block'.*/ 
+    /*I learned that this allows the car boxes to be perfectly centered from CSDN*/
     display: inline-block; 
     border: 1px solid black; 
     padding: 8px 25px; 
@@ -83,6 +89,8 @@
 }
 
 .black-action-btn {
+    /*Switched from 'float' to 'inline-block'.*/ 
+    /*I learned that this allows the car boxes to be perfectly centered from CSDN*/
     display: inline-block;
     background-color: black;
     color: white;
