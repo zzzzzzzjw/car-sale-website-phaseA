@@ -74,8 +74,7 @@ body.buyer-page {
     padding: 10px 30px;
     background-color: black;
     color: white;
-    border: none;
-    cursor: pointer;
+    border: none;  
 }
 
 .filter-bar button:hover {
@@ -99,7 +98,6 @@ body.buyer-page {
     width: 220px;
     display: inline-block;
     margin-right: 20px;
-    cursor: pointer;
 }
 
 .car-card img {
