@@ -5,37 +5,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/box_style.css">
     <link rel="stylesheet" href="../css/seller_style.css">
-    
-    <style>
-        .left-gray-box {
-            width: 260px !important;
-        }
-        .box-input-field {
-            width: 85% !important;
-        }
-        .left-gray-box label,
-        .left-gray-box input,
-        .left-gray-box .box-input-field,
-        .left-gray-box .box-main-title {
-            font-size: 11pt !important;
-        }
-        .box-main-title {
-            font-size: 16pt !important;
-            padding: 8px !important;
-        }
-        .full-screen-container {
-            margin-top: 10px !important;
-        }
-        .right-explain-text {
-            margin-top: 40px;
-        }
-        .right-explain-text h1 {
-            font-size: 20pt !important;
-        }
-        .right-explain-text p {
-            font-size: 12pt !important;
-        }
-    </style>
 </head>
 <body>
 
@@ -58,42 +27,51 @@
 
 <div style="clear: both;"></div>
 
-<div class="full-screen-container">
-    <div class="left-gray-box">
-        <h2 class="box-main-title">Add a Car</h2>
+<div class="full-screen-container" style="margin-top: 10px;">
+
+    <div class="left-gray-box" style="width: 380px;">
+        <h2 class="box-main-title" style="font-size: 16pt; padding: 8px;">Add a Car</h2>
         
         <form id="AddCarForm" style="margin-top: 15px;">
-            <div class="input-field-group">
-                <label>Colour:</label>
-                <input type="text" name="colour" required class="box-input-field">
+            
+            <div class="input-field-group" style="margin-bottom: 12px;">
+                <label style="font-size: 11pt; display: block; margin-bottom: 5px;">Colour:</label>
+                <input type="text" name="colour" required class="box-input-field" style="width: 90%; padding: 8px; font-size: 11pt;">
             </div>
-            <div class="input-field-group">
-                <label>Model:</label>
-                <input type="text" name="model" required class="box-input-field">
+
+            <div class="input-field-group" style="margin-bottom: 12px;">
+                <label style="font-size: 11pt; display: block; margin-bottom: 5px;">Model:</label>
+                <input type="text" name="model" required class="box-input-field" style="width: 90%; padding: 8px; font-size: 11pt;">
             </div>
-            <div class="input-field-group">
-                <label>Year:</label>
-                <input type="text" name="year" required pattern="[0-9]{4}" title="Please enter a valid 4-digit year" class="box-input-field">
+
+            <div class="input-field-group" style="margin-bottom: 12px;">
+                <label style="font-size: 11pt; display: block; margin-bottom: 5px;">Year:</label>
+                <input type="text" name="year" required pattern="[0-9]{4}" title="Please enter a valid 4-digit year" class="box-input-field" style="width: 90%; padding: 8px; font-size: 11pt;">
             </div>
-            <div class="input-field-group">
-                <label>Location:</label>
-                <input type="text" name="location" required class="box-input-field">
+
+            <div class="input-field-group" style="margin-bottom: 12px;">
+                <label style="font-size: 11pt; display: block; margin-bottom: 5px;">Location:</label>
+                <input type="text" name="location" required class="box-input-field" style="width: 90%; padding: 8px; font-size: 11pt;">
             </div>
-            <div class="input-field-group">
-                <label>Price:</label>
-                <input type="text" name="price" required pattern="[0-9]+" title="Please enter a valid price" class="box-input-field">
+
+            <div class="input-field-group" style="margin-bottom: 12px;">
+                <label style="font-size: 11pt; display: block; margin-bottom: 5px;">Price:</label>
+                <input type="text" name="price" required pattern="[0-9]+" title="Please enter a valid price" class="box-input-field" style="width: 90%; padding: 8px; font-size: 11pt;">
             </div>
-            <div class="input-field-group">
-                <label>Image URL:</label>
-                <input type="text" name="image" class="box-input-field" placeholder="../images/car1.jpg">
+
+            <div class="input-field-group" style="margin-bottom: 12px;">
+                <label style="font-size: 11pt; display: block; margin-bottom: 5px;">Image URL:</label>
+                <input type="text" name="image" class="box-input-field" placeholder="../images/car1.jpg" style="width: 90%; padding: 8px; font-size: 11pt;">
             </div>
-            <input type="submit" value="Submit" style="background-color: black; color: white; padding: 10px 20px;">
+
+            <input type="submit" value="Submit" style="background-color: black; color: white; padding: 10px 20px; margin-top: 10px;">
         </form>
     </div>
 
-    <div class="right-explain-text">
-        <h1>Sell Your Car</h1>
-        <p>List your vehicle and reach thousands of potential buyers today.</p>
+
+    <div class="right-explain-text" style="margin-top: 40px;">
+        <h1 style="font-size: 20pt;">Sell Your Car</h1>
+        <p style="font-size: 12pt;">List your vehicle and reach thousands of potential buyers today.</p>
     </div>
 </div>
 
