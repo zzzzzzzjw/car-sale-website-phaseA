@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Cars - AutoMarket</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/buyer_style.css">
+</head>
+<body class="buyer-page">
+
+<div class="navbar">
+    <div class="container clearfix">
+        <div class="logo">
+            <a href="../homepage/index.html">
+                <img src="../images/logo.png" alt="AutoMarket Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../homepage/index.html">Home</a></li>
+            <li><a href="search.html">Search Cars</a></li>
+            <li><a href="../seller/register.html">Register</a></li>
+            <li><a href="../seller/login.html">Login</a></li>
+            <li><a href="../seller/add-car.html">Add Car</a></li>
+        </ul>
+    </div>
+</div>
+
+<div style="clear: both;"></div>
+
+<div class="hero">
+    <div class="hero-text">SEARCH</div>
+</div>
+
+<div class="filter-bar">
+    <input type="text" id="model" placeholder="Model e.g. Tesla">
+    <input type="text" id="year" placeholder="Year e.g. 2023">
+    <input type="text" id="colour" placeholder="Colour e.g. Red">
+    <input type="text" id="price" placeholder="Price e.g. 300000">
+    <button onclick="doSearch()">Search</button>
+</div>
+
+<div class="recommend-section">
+    <div class="recommend-title">Recommended for You</div>
+    <div class="car-card" onclick="goToDetail('Tesla Model S', 2023)">
+        <img src="../images/TESLA_S.png" alt="Tesla Model S">
+        <h3>Tesla Model S - 2023</h3>
+        <p>¥350,000</p>
+    </div>
+</div>
+
+<script>
+    function doSearch() {
+        var model = document.getElementById('model').value;
+        var year = document.getElementById('year').value;
+        var colour = document.getElementById('colour').value;
+        var price = document.getElementById('price').value;
+        
+        var params = [];
+        if (model) params.push('model=' + encodeURIComponent(model));
+        if (year) params.push('year=' + encodeURIComponent(year));
+        if (colour) params.push('colour=' + encodeURIComponent(colour));
+        if (price) params.push('price=' + encodeURIComponent(price));
+        
+        var queryString = params.join('&');
+        window.location.href = 'detail.html?' + queryString;
+    }
+    
+    function goToDetail(model, year) {
+        window.location.href = 'detail.html?model=' + encodeURIComponent(model) + '&year=' + year;
+    }
+</script>
+
+</body>
+</html>

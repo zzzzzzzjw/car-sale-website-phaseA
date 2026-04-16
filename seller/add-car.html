@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Car - AutoMarket</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/box_style.css">
+    <link rel="stylesheet" href="../css/seller_style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="container clearfix">
+        <div class="logo">
+            <a href="../homepage/index.html">
+                <img src="../images/logo.png" alt="AutoMarket Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../homepage/index.html">Home</a></li>
+            <li><a href="../buyer/search.html">Search Cars</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="add-car.html">Add Car</a></li>
+        </ul>
+    </div>
+</div>
+
+<div style="clear: both;"></div>
+
+<div class="full-screen-container" style="margin-top: 10px;">
+
+    <div class="left-gray-box" style="width: 380px;">
+        <h2 class="box-main-title" style="font-size: 16pt; padding: 8px;">Add a Car</h2>
+        
+        <form id="AddCarForm" style="margin-top: 15px;">
+            
+            <div class="input-field-group" style="margin-bottom: 12px;">
+                <label style="font-size: 11pt; display: block; margin-bottom: 5px;">Colour:</label>
+                <input type="text" name="colour" required class="box-input-field" style="width: 90%; padding: 8px; font-size: 11pt;">
+            </div>
+
+            <div class="input-field-group" style="margin-bottom: 12px;">
+                <label style="font-size: 11pt; display: block; margin-bottom: 5px;">Model:</label>
+                <input type="text" name="model" required class="box-input-field" style="width: 90%; padding: 8px; font-size: 11pt;">
+            </div>
+
+            <div class="input-field-group" style="margin-bottom: 12px;">
+                <label style="font-size: 11pt; display: block; margin-bottom: 5px;">Year:</label>
+                <input type="text" name="year" required pattern="[0-9]{4}" title="Please enter a valid 4-digit year" class="box-input-field" style="width: 90%; padding: 8px; font-size: 11pt;">
+            </div>
+
+            <div class="input-field-group" style="margin-bottom: 12px;">
+                <label style="font-size: 11pt; display: block; margin-bottom: 5px;">Location:</label>
+                <input type="text" name="location" required class="box-input-field" style="width: 90%; padding: 8px; font-size: 11pt;">
+            </div>
+
+            <div class="input-field-group" style="margin-bottom: 12px;">
+                <label style="font-size: 11pt; display: block; margin-bottom: 5px;">Price:</label>
+                <input type="text" name="price" required pattern="[0-9]+" title="Please enter a valid price" class="box-input-field" style="width: 90%; padding: 8px; font-size: 11pt;">
+            </div>
+
+            <div class="input-field-group" style="margin-bottom: 12px;">
+                <label style="font-size: 11pt; display: block; margin-bottom: 5px;">Image URL:</label>
+                <input type="text" name="image" class="box-input-field" placeholder="../images/car1.jpg" style="width: 90%; padding: 8px; font-size: 11pt;">
+            </div>
+
+            <input type="submit" value="Submit" style="background-color: black; color: white; padding: 10px 20px; margin-top: 10px;">
+        </form>
+    </div>
+
+
+    <div class="right-explain-text" style="margin-top: 40px;">
+        <h1 style="font-size: 20pt;">Sell Your Car</h1>
+        <p style="font-size: 12pt;">List your vehicle and reach thousands of potential buyers today.</p>
+    </div>
+</div>
+
+</body>
+</html>
