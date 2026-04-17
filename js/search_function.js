@@ -1,12 +1,17 @@
-var cars = [
-    { model: "Tesla Model S", year: 2023, colour: "Red", price: 350000, location: "Beijing", image: "../images/TESLA_S.png", description: "Electric luxury sedan, autopilot included." },
-    { model: "SUV", year: 2022, colour: "Grey", price: 250000, location: "Shanghai", image: "../images/SUV-grey.jpg", description: "Spacious family SUV, low mileage." },
-    { model: "BMW i8", year: 2023, colour: "Blue", price: 450000, location: "Beijing", image: "../images/BMW-blue.jpg", description: "Hybrid sports car, excellent condition." },
-    { model: "BMW", year: 2025, colour: "White", price: 200000, location: "Shenzhen", image: "../images/BMW-white.jpg", description: "Luxury sedan, fully loaded." },
-    { model: "SUV", year: 2024, colour: "Red", price: 400000, location: "Beijing", image: "../images/SUV-red.jpg", description: "Premium SUV, panoramic roof." },
-    { model: "Xiaomi", year: 2023, colour: "Grey", price: 350000, location: "Beijing", image: "../images/xiaomi-grey.jpg", description: "Smart electric car, tech features." }
-];
-
+var storedCars = localStorage.getItem('carsData');// localStorage self-learned
+if (storedCars) {
+    window.cars = JSON.parse(storedCars);
+} else {
+    window.cars = [
+        { model: "Tesla Model S", year: 2023, colour: "Red", price: 350000, location: "Beijing", image: "../images/TESLA_S.png", description: "Electric luxury sedan, autopilot included." },
+        { model: "SUV", year: 2022, colour: "Grey", price: 250000, location: "Shanghai", image: "../images/SUV-grey.jpg", description: "Spacious family SUV, low mileage." },
+        { model: "BMW i8", year: 2023, colour: "Blue", price: 450000, location: "Beijing", image: "../images/BMW-blue.jpg", description: "Hybrid sports car, excellent condition." },
+        { model: "BMW", year: 2025, colour: "White", price: 200000, location: "Shenzhen", image: "../images/BMW-white.jpg", description: "Luxury sedan, fully loaded." },
+        { model: "SUV", year: 2024, colour: "Red", price: 400000, location: "Beijing", image: "../images/SUV-red.jpg", description: "Premium SUV, panoramic roof." },
+        { model: "Xiaomi", year: 2023, colour: "Grey", price: 350000, location: "Beijing", image: "../images/xiaomi-grey.jpg", description: "Smart electric car, tech features." }
+    ];
+    localStorage.setItem('carsData', JSON.stringify(window.cars));
+}
 
 function getQueryParam(param) {
     var url = window.location.href;
@@ -20,15 +25,14 @@ function goToDetail(model, year) {
     window.location.href = 'detail.html?model=' + encodeURIComponent(model) + '&year=' + year;
 }
 
-
 function loadRecommendations() {
     if (!document.getElementById('recommendContainer')) return;
     var html = '';
-    for (var i = 0; i < cars.length; i++) {
-        html += '<div class="car-card" onclick="goToDetail(\'' + cars[i].model + '\', ' + cars[i].year + ')">';
-        html += '<img src="' + cars[i].image + '" alt="' + cars[i].model + '">';
-        html += '<h3>' + cars[i].model + ' - ' + cars[i].year + '</h3>';
-        html += '<p>¥' + cars[i].price.toLocaleString() + '</p>';
+    for (var i = 0; i < window.cars.length; i++) {
+        html += '<div class="car-card" onclick="goToDetail(\'' + window.cars[i].model + '\', ' + window.cars[i].year + ')">';
+        html += '<img src="' + window.cars[i].image + '" alt="' + window.cars[i].model + '">';
+        html += '<h3>' + window.cars[i].model + ' - ' + window.cars[i].year + '</h3>';
+        html += '<p>¥' + window.cars[i].price.toLocaleString() + '</p>';
         html += '</div>';
     }
     document.getElementById('recommendContainer').innerHTML = html;
@@ -45,7 +49,7 @@ function doSearch() {
         return;
     }
 
-    var results = cars.filter(function(car) {
+    var results = window.cars.filter(function(car) {
         var match = true;
         if (modelInput && !car.model.toLowerCase().includes(modelInput)) match = false;
         if (yearInput && car.year != yearInput) match = false;
@@ -72,7 +76,7 @@ function doSearch() {
 function findCar(modelParam, yearParam) {
     if (!modelParam && !yearParam) return null;
     
-    return cars.find(function(car) {
+    return window.cars.find(function(car) {
         var modelMatch = true;
         var yearMatch = true;
         

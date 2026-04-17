@@ -78,8 +78,23 @@ if (form) {
             event.preventDefault();
             alert("Please fix the errors in the form before submitting.");
         } else {
-            alert("Car added successfully!");
-
+            if (window.cars) {
+                var newCar = {
+                    model: modelInput.value.trim(),
+                    year: parseInt(yearInput.value.trim()),
+                    colour: colourInput.value.trim(),
+                    price: parseInt(priceInput.value.trim()),
+                    location: locationInput.value.trim(),
+                    image: imageInput.value.trim() || "../images/logo.png",
+                    description: "Newly listed vehicle."
+                };
+                window.cars.push(newCar);
+                localStorage.setItem('carsData', JSON.stringify(window.cars));
+                alert("Car added successfully! You can now search for it.");
+            } else {
+                alert("Car added successfully! (Note: Search database not available)");
+            }
+            form.reset();
         }
     });
 }
