@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Details - AutoMarket</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/buyer_style.css">
@@ -11,12 +10,12 @@
 <div class="navbar">
     <div class="container clearfix">
         <div class="logo">
-            <a href="../homepage/index.html">
+            <a href="../index.html">
                 <img src="../images/logo.png" alt="AutoMarket Logo">
             </a>
         </div>
         <ul class="nav-links">
-            <li><a href="../homepage/index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="search.html">Search Cars</a></li>
             <li><a href="../seller/register.html">Register</a></li>
             <li><a href="../seller/login.html">Login</a></li>
@@ -31,16 +30,16 @@
     <h1 style="text-align: center;">Car Details</h1>
     
     <div style="text-align: center;">
-        <img src="../images/TESLA_S.png" alt="Tesla Model S" class="detail-image">
+        <img id="detailImage" src="../images/logo.png" alt="Car Image" class="detail-image">
     </div>
     
     <div class="detail-info">
-        <p><strong>Model:</strong> <span id="modelValue">Tesla Model S</span></p>
-        <p><strong>Colour:</strong> <span id="colourValue">Red</span></p>
-        <p><strong>Year:</strong> <span id="yearValue">2023</span></p>
-        <p><strong>Location:</strong> <span id="locationValue">Beijing, China</span></p>
-        <p><strong>Price:</strong> <span id="priceValue">¥350,000</span></p>
-        <p><strong>Description:</strong> Excellent condition, low mileage, fully serviced.</p>
+        <p><strong>Model:</strong> <span id="modelValue">-</span></p>
+        <p><strong>Colour:</strong> <span id="colourValue">-</span></p>
+        <p><strong>Year:</strong> <span id="yearValue">-</span></p>
+        <p><strong>Location:</strong> <span id="locationValue">-</span></p>
+        <p><strong>Price:</strong> <span id="priceValue">-</span></p>
+        <p><strong>Description:</strong> <span id="descriptionValue">-</span></p>
     </div>
     
     <div style="text-align: center;">
@@ -48,29 +47,9 @@
     </div>
 </div>
 
+<script src="../js/search_function.js"></script>
 <script>
-    function getQueryParam(param) {
-        var urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(param);
-    }
-
-    var model = getQueryParam('model');
-    var year = getQueryParam('year');
-    var colour = getQueryParam('colour');
-    var price = getQueryParam('price');
-
-    if (model) {
-        document.getElementById('modelValue').innerHTML = model;
-    }
-    if (year) {
-        document.getElementById('yearValue').innerHTML = year;
-    }
-    if (colour) {
-        document.getElementById('colourValue').innerHTML = colour;
-    }
-    if (price) {
-        document.getElementById('priceValue').innerHTML = '¥' + price;
-    }
+    updateDetailPage();
 </script>
 
 </body>
