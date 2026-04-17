@@ -81,6 +81,33 @@ CAR-SALE-WEBSITE-PHASEA/
 ├── index.html
 └── README.md
 
+# JavaScript Interaction Instructions
+
+All front-end interactions in this project are implemented using native JavaScript without any third-party frameworks. To facilitate learning and demonstration, we utilize the browser's built-in localStorage for temporary data storage, simulating a backend database environment. The following JS files serve specific functions:
+
+1. Register and Login (register_login.js)
+Signing Up: When you fill out the registration form, the script stops the page from refreshing, grabs your username and password, and saves them as a simple object in localStorage (under the key autoverve_account). After that, it shows a success message and automatically takes you to the login page.
+
+Logging In: When you try to log in, it checks your input against what's saved locally. If they match, it sets a "logged in" flag and redirects you to the seller dashboard. If not, it tells you the credentials are wrong. If no account exists yet, it politely reminds you to register first.
+
+2. Access Guard (judge_login.js)
+This is a simple "gatekeeper" script. It runs on pages that only sellers should see. It just checks if the "logged in" flag is set to true. If you're not logged in, it pops up a warning and sends you straight back to the login page so you can't access restricted areas.
+
+3. Car Search & Display (search_function.js)
+Loading Data: When the page opens, it first tries to read car data from localStorage. If it's empty (like the very first time you visit), it loads 6 sample cars and saves them locally so other pages can use them.
+
+Filtering Cars: You can search by model, year, color, or max price. The script compares your inputs with the saved list, updates the page instantly, and shows a friendly message if nothing matches.
+
+Viewing Details: When you click a car card, it attaches the model and year to the URL. The detail page reads that URL, finds the matching car, and automatically fills in the image, price, location, and description.
+
+Recommendations: It also builds a "Recommended Cars" section at the bottom by looping through all available cars and creating clickable cards.
+
+4. Adding Cars & Form Validation (addcar.js)
+Real-time Checks: As you type, the script uses simple rules to check if your input is valid. For example, color should only be letters, year must be exactly 4 numbers, and price should only contain digits. If you make a mistake, a red warning appears right below the field.
+
+Submitting the Form: Once everything looks good, it stops the form from refreshing the page, packs your new car into an object, adds it to the car list, and saves it to localStorage. Then it shows a success message and sends you to the search page. If you leave the image field blank, it automatically uses a default placeholder so the layout doesn't break.
+
+
 # Collaboration Workflow
 1. Branching Model:
 main: Protected branch, contains only deployable versions.
