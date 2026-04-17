@@ -10,7 +10,7 @@ if (storedCars) {
         { model: "SUV", year: 2024, colour: "Red", price: 400000, location: "Beijing", image: "../images/SUV-red.jpg", description: "Premium SUV, panoramic roof." },
         { model: "Xiaomi", year: 2023, colour: "Grey", price: 350000, location: "Beijing", image: "../images/xiaomi-grey.jpg", description: "Smart electric car, tech features." }
     ];
-    localStorage.setItem('carsData', JSON.stringify(window.cars));
+    localStorage.setItem('carsData', JSON.stringify(window.cars));// localStorage self-learned
 }
 
 function getQueryParam(param) {
