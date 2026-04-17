@@ -12,6 +12,7 @@ body {
 .full-screen-container {
     width: 100%;
     margin-top: 100px; 
+    margin-bottom: 100px;
 }
 
 .right-explain-text {
@@ -24,7 +25,8 @@ body {
 .left-gray-box {
     float: left;           
     width: 400px;           
-    margin-left: 6%;      
+    margin-left: 6%; 
+    margin-bottom: 100px;     
     
     background-color: lightgray; 
     
