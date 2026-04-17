@@ -112,3 +112,43 @@
     color: #e53935;
     font-weight: bold;
 }
+
+/*ipad-shupin*/
+@media screen and (max-width: 768px) {
+    .hero-text {
+        font-size: 36px;
+        text-align: center;
+        width: 90%;
+    }
+    
+    .car-card {
+        width: 45%;
+        margin: 10px 2%;
+    }
+    
+    .detail-container {
+        margin-top: 30px;
+        width: 90%; 
+        box-sizing: border-box;
+    }
+}
+
+/*iphone*/
+@media screen and (max-width: 480px) {
+    .hero-text {
+        font-size: 28px;
+    }
+    
+    .filter-bar input, .filter-bar button {
+        width: 90%;
+        display: block;
+        margin: 10px auto;
+        box-sizing: border-box;
+    }
+    
+    .car-card {
+        display: block;
+        width: 90%;
+        margin: 20px auto;
+    }
+}

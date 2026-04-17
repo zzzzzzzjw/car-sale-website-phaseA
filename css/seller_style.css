@@ -106,3 +106,59 @@
     background-color: white; 
     color: black;
 }
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/*ipad-hengpin*/
+@media screen and (max-width: 1200px) {
+    .inner-container {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box; 
+    }
+}
+
+/*ipad-shupin*/
+@media screen and (max-width: 768px) {
+    .car-box {
+        width: 44%; 
+        margin: 20px 2.5%;
+    }
+    .hengxiangzhanshi-bigtitle {
+        font-size: 48px; 
+    }
+}
+
+/*iphone*/
+@media screen and (max-width: 480px) {
+    .car-box {
+        width: 94%;
+        margin: 20px 3%;
+    }
+    
+    .black-action-btn {
+        display: block; 
+        width: 80%;
+        margin: 15px auto;
+        box-sizing: border-box;
+    }
+    
+    .hengxiangzhanshi-section {
+        padding: 40px 0 100px 0;
+    }
+    
+    .hengxiangzhanshi-bigtitle {
+        font-size: 36px;
+    }
+    
+    .brand-logo-area, ul.main-menu-links {
+        float: none;
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+    }
+    ul.main-menu-links li {
+        display: inline-block;
+        float: none;
+    }
+}

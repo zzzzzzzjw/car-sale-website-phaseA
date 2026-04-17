@@ -62,3 +62,39 @@ body {
     font-family: Arial; 
     font-size: 12pt;
 }
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+/*ipad-hengpin*/
+@media screen and (max-width: 1200px) {
+    .right-explain-text {
+        width: 45%; 
+        margin-right: 5%;
+    }
+    .left-gray-box {
+        margin-left: 5%;
+    }
+}
+
+/*ipad-shupin + iphone*/
+@media screen and (max-width: 768px) {
+    .full-screen-container {
+        margin-top: 50px; 
+    }
+    
+    .left-gray-box, .right-explain-text {
+        float: none; 
+        width: 90%; 
+        margin: 20px auto; 
+        box-sizing: border-box;
+    }
+    
+    .right-explain-text {
+        text-align: center; 
+    }
+    
+    .box-input-field {
+        width: 100%; 
+        box-sizing: border-box;
+    }
+}
