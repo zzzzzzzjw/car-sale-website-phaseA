@@ -34,6 +34,31 @@ Registration page: Field validation is required.
     Feature Branch: feature/buyer-buyer_style
     Responsibilities: Seller Registration & Login pages, Regex validation implementation.
 
+# Project Structure
+car-sale-website-phaseA/
+├── README.md                  # Project documentation
+├── index.html                 # Homepage 
+├── css/                       # Modular CSS stylesheets
+│   ├── box_style.css          # 
+│   ├── buyer_style.css        # 
+│   └── style.css              # 
+├── js/                        # JavaScript modules
+│   ├── common/                # Shared utilities
+│   │   └── main.js            # Global scripts (e.g., mobile menu toggle)
+│   └── modules/               # Feature-specific logic
+│       ├── validation.js      # Regex validation for forms
+│       ├── car.js             # Car data handling
+│       └── search.js          # Search filtering logic
+├──  seller/                # Seller module
+│      ├── register.html
+│      ├── add-car.html
+│      └── login.html
+│──  buyer/                   # Car module
+│     ├── search.html
+│     └── detail.html
+├── images/                    # Static assets
+└──
+
 # Collaboration Workflow
 1. Branching Model:
 main: Protected branch, contains only deployable versions.
