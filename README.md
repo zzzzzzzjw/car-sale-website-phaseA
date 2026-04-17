@@ -35,29 +35,51 @@ Registration page: Field validation is required.
     Responsibilities: Seller Registration & Login pages, Regex validation implementation.
 
 # Project Structure
-car-sale-website-phaseA/
-├── README.md                  # Project documentation
-├── index.html                 # Homepage 
-├── css/                       # Modular CSS stylesheets
-│   ├── box_style.css          # 
-│   ├── buyer_style.css        # 
-│   └── style.css              # 
-├── js/                        # JavaScript modules
-│   ├── common/                # Shared utilities
-│   │   └── main.js            # Global scripts (e.g., mobile menu toggle)
-│   └── modules/               # Feature-specific logic
-│       ├── validation.js      # Regex validation for forms
-│       ├── car.js             # Car data handling
-│       └── search.js          # Search filtering logic
-├──  seller/                # Seller module
-│      ├── register.html
-│      ├── add-car.html
-│      └── login.html
-│──  buyer/                   # Car module
-│     ├── search.html
-│     └── detail.html
-├── images/                    # Static assets
-└──
+CAR-SALE-WEBSITE-PHASEA/
+├── buyer/
+│   ├── detail.html
+│   └── search.html
+├── css/
+│   ├── box_style.css
+│   ├── buyer_style.css
+│   ├── seller_style.css
+│   └── style.css
+├── images/
+│   ├── background.jpg
+│   ├── BMW-blue.jpg
+│   ├── BMW-white.jpg
+│   ├── car1.jpg
+│   ├── car2.jpg
+│   ├── car3.jpg
+│   ├── car4.jpg
+│   ├── car5.jpg
+│   ├── car6.jpg
+│   ├── car7.jpg
+│   ├── car8.jpg
+│   ├── car9.jpg
+│   ├── car10.jpg
+│   ├── car11.jpg
+│   ├── car12.jpg
+│   ├── car13.jpg
+│   ├── car14.jpg
+│   ├── logo.png
+│   ├── sellerpgae-car.jpg
+│   ├── SUV-grey.jpg
+│   ├── SUV-red.jpg
+│   ├── TESLA_S.png
+│   └── xiaomi-grey.jpg
+├── js/
+│   ├── addcar.js
+│   ├── judge_login.js
+│   ├── register_login.js
+│   └── search_function.js
+├── seller/
+│   ├── add-car.html
+│   ├── login.html
+│   ├── register.html
+│   └── seller.html
+├── index.html
+└── README.md
 
 # Collaboration Workflow
 1. Branching Model:
