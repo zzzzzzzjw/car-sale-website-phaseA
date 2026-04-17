@@ -91,8 +91,10 @@ if (form) {
                 window.cars.push(newCar);
                 localStorage.setItem('carsData', JSON.stringify(window.cars));
                 alert("Car added successfully! You can now search for it.");
+                window.location.href = "../buyer/search.html"
             } else {
                 alert("Car added successfully! (Note: Search database not available)");
+                window.location.href = "../buyer/search.html"
             }
             form.reset();
         }
