@@ -71,7 +71,8 @@ body {
     background-image: url('../images/background.jpg'); /* Background image */
     background-size: cover;
     background-position: center;
-    height: 85vh; /* Height based on screen */
+    min-height: 85vh; 
+    padding-bottom: 60px;
     position: relative; /* Needed for overlay */
 }
 
@@ -231,54 +232,50 @@ body {
     padding: 20px 0;
 }
 
-/* Responsive design for tablets */
+/*------------------------------------------------------------------------------------------------*/
+
+/*ipad-shupin*/
 @media screen and (max-width: 768px) {
 
-    /* Stack logo and nav vertically */
     .logo, .nav-links {
         float: none;
         text-align: center;
     }
-    
+
     .nav-links li {
         float: none;
         display: block;
     }
     
-    /* Reduce text size */
     .hero-section h1 { font-size: 32px; }
     .hero-section p { font-size: 16px; }
     .about-section h2 { font-size: 24px; }
     
-    /* Make buttons full width */
     .btn {
         width: 100%;
         text-align: center;
+        margin-bottom: 10px;
     }
     
-    /* Change car layout to 2 columns */
     .car-item {
         width: 50%;
     }
 }
 
-/* Responsive design for mobile */
+/*iphone*/
 @media screen and (max-width: 480px) {
 
-    /* One column layout */
     .car-item {
         width: 100%;
     }
     
-    /* Reduce hero height */
     .hero-section {
-        height: 70vh;
+        height: auto; 
+        min-height: 70vh; 
+        padding-bottom: 50px; 
     }
-}
-
-/* Clear float fix */
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+    
+    .hero-content {
+        padding-top: 80px; 
+    }
 }
